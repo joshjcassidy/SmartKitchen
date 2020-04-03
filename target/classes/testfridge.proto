@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "io.grpc.smartkitchen.fridge";
+option java_package = "io.grpc.smartkitchen.testfridge";
 
 service SmartFridge{
 	rpc temperatureDisplay (TemperatureRequest) returns (TemperatureResponse);
@@ -14,5 +14,5 @@ message TemperatureRequest{
 }
 
 message TemperatureResponse{
-	int32 message = 1;
+	string message = 1;
 }
