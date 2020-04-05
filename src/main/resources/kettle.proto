@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.smartkitchen.kettle";
+
+service SmartKettle{
+	rpc boil (BoilRequest) returns (stream BoilResponse);
+	
+}
+
+message BoilRequest{
+	string message = 1; //setting number of responses we want returned from client
+}
+
+message BoilResponse{
+	string boilStarted = 1;
+	
+	string boilFinished = 2;
+}

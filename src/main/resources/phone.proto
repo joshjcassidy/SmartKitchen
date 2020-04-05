@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.smartkitchen.phone";
+
+service SmartPhone{
+	
+	rpc boil (BoilRequest) returns (stream BoilResponse);
+	
+	rpc temperature (TemperatureRequest) returns (TemperatureResponse);
+	
+	rpc preheat (stream PreheatRequest) returns (stream PreheatResponse);
+	
+	rpc turnOff (stream TurnOffRequest) returns (TurnOffResponse);
+	
+	rpc lightsOn (LightsOnRequest) returns (LightsOnResponse);
+	
+	rpc lightsOff (LightsOffRequest) returns (LightsOffResponse);
+	
+	
+}
+
+message BoilRequest{
+	string message = 1; //setting number of responses we want returned from client
+}
+
+message BoilResponse{
+	string boilStarted = 1;
+	
+	string boilFinished = 2;
+}
+
+message TemperatureRequest{
+	string message = 1; //setting number of responses we want returned from client
+}
+
+message TemperatureResponse{
+	int32 message = 1;
+}
+
+message PreheatRequest{
+	string setting = 1; //setting number of responses we want returned from client
+	
+	int32 heat = 2;
+}
+
+message PreheatResponse{
+	string ovenSettingSelected = 1;
+	
+	string heatSelected = 2;
+}
+
+message TurnOffRequest{
+	string turnOffHeat = 1;
+	
+	string turnOffOven = 2;
+}
+
+message TurnOffResponse{
+	string message = 1;
+}
+
+message LightsOnRequest{
+	string message = 1;
+}
+
+message LightsOnResponse{
+	string message = 1;
+}
+
+message LightsOffRequest{
+	string message = 1;
+}
+
+message LightsOffResponse{
+	string message = 1;
+}

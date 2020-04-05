@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TemperatureRequest() {
-    name_ = "";
+    message_ = "";
   }
 
   @java.lang.Override
@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            name_ = s;
+            message_ = s;
             break;
           }
           default: {
@@ -81,24 +81,24 @@ private static final long serialVersionUID = 0L;
             io.grpc.smartkitchen.fridge.TemperatureRequest.class, io.grpc.smartkitchen.fridge.TemperatureRequest.Builder.class);
   }
 
-  public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  public static final int MESSAGE_FIELD_NUMBER = 1;
+  private volatile java.lang.Object message_;
   /**
    * <pre>
    *setting number of responses we want returned from client
    * </pre>
    *
-   * <code>string name = 1;</code>
+   * <code>string message = 1;</code>
    */
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
+  public java.lang.String getMessage() {
+    java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      name_ = s;
+      message_ = s;
       return s;
     }
   }
@@ -107,16 +107,16 @@ private static final long serialVersionUID = 0L;
    *setting number of responses we want returned from client
    * </pre>
    *
-   * <code>string name = 1;</code>
+   * <code>string message = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
+      getMessageBytes() {
+    java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      name_ = b;
+      message_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -137,8 +137,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+    if (!getMessageBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
     }
     unknownFields.writeTo(output);
   }
@@ -149,8 +149,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+    if (!getMessageBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -168,8 +168,8 @@ private static final long serialVersionUID = 0L;
     io.grpc.smartkitchen.fridge.TemperatureRequest other = (io.grpc.smartkitchen.fridge.TemperatureRequest) obj;
 
     boolean result = true;
-    result = result && getName()
-        .equals(other.getName());
+    result = result && getMessage()
+        .equals(other.getMessage());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -181,8 +181,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getMessage().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      name_ = "";
+      message_ = "";
 
       return this;
     }
@@ -344,7 +344,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public io.grpc.smartkitchen.fridge.TemperatureRequest buildPartial() {
       io.grpc.smartkitchen.fridge.TemperatureRequest result = new io.grpc.smartkitchen.fridge.TemperatureRequest(this);
-      result.name_ = name_;
+      result.message_ = message_;
       onBuilt();
       return result;
     }
@@ -393,8 +393,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(io.grpc.smartkitchen.fridge.TemperatureRequest other) {
       if (other == io.grpc.smartkitchen.fridge.TemperatureRequest.getDefaultInstance()) return this;
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
+      if (!other.getMessage().isEmpty()) {
+        message_ = other.message_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -426,21 +426,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object name_ = "";
+    private java.lang.Object message_ = "";
     /**
      * <pre>
      *setting number of responses we want returned from client
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string message = 1;</code>
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        message_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -451,16 +451,16 @@ private static final long serialVersionUID = 0L;
      *setting number of responses we want returned from client
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string message = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
+        getMessageBytes() {
+      java.lang.Object ref = message_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        name_ = b;
+        message_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -471,15 +471,15 @@ private static final long serialVersionUID = 0L;
      *setting number of responses we want returned from client
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string message = 1;</code>
      */
-    public Builder setName(
+    public Builder setMessage(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      name_ = value;
+      message_ = value;
       onChanged();
       return this;
     }
@@ -488,11 +488,11 @@ private static final long serialVersionUID = 0L;
      *setting number of responses we want returned from client
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string message = 1;</code>
      */
-    public Builder clearName() {
+    public Builder clearMessage() {
       
-      name_ = getDefaultInstance().getName();
+      message_ = getDefaultInstance().getMessage();
       onChanged();
       return this;
     }
@@ -501,16 +501,16 @@ private static final long serialVersionUID = 0L;
      *setting number of responses we want returned from client
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string message = 1;</code>
      */
-    public Builder setNameBytes(
+    public Builder setMessageBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      name_ = value;
+      message_ = value;
       onChanged();
       return this;
     }

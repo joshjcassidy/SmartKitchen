@@ -28,35 +28,35 @@ public final class SmartFridgeGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<io.grpc.smartkitchen.fridge.TemperatureRequest,
-      io.grpc.smartkitchen.fridge.TemperatureResponse> getTemperatureDisplayMethod;
+      io.grpc.smartkitchen.fridge.TemperatureResponse> getTemperatureMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "temperatureDisplay",
+      fullMethodName = SERVICE_NAME + '/' + "temperature",
       requestType = io.grpc.smartkitchen.fridge.TemperatureRequest.class,
       responseType = io.grpc.smartkitchen.fridge.TemperatureResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<io.grpc.smartkitchen.fridge.TemperatureRequest,
-      io.grpc.smartkitchen.fridge.TemperatureResponse> getTemperatureDisplayMethod() {
-    io.grpc.MethodDescriptor<io.grpc.smartkitchen.fridge.TemperatureRequest, io.grpc.smartkitchen.fridge.TemperatureResponse> getTemperatureDisplayMethod;
-    if ((getTemperatureDisplayMethod = SmartFridgeGrpc.getTemperatureDisplayMethod) == null) {
+      io.grpc.smartkitchen.fridge.TemperatureResponse> getTemperatureMethod() {
+    io.grpc.MethodDescriptor<io.grpc.smartkitchen.fridge.TemperatureRequest, io.grpc.smartkitchen.fridge.TemperatureResponse> getTemperatureMethod;
+    if ((getTemperatureMethod = SmartFridgeGrpc.getTemperatureMethod) == null) {
       synchronized (SmartFridgeGrpc.class) {
-        if ((getTemperatureDisplayMethod = SmartFridgeGrpc.getTemperatureDisplayMethod) == null) {
-          SmartFridgeGrpc.getTemperatureDisplayMethod = getTemperatureDisplayMethod = 
+        if ((getTemperatureMethod = SmartFridgeGrpc.getTemperatureMethod) == null) {
+          SmartFridgeGrpc.getTemperatureMethod = getTemperatureMethod = 
               io.grpc.MethodDescriptor.<io.grpc.smartkitchen.fridge.TemperatureRequest, io.grpc.smartkitchen.fridge.TemperatureResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "SmartFridge", "temperatureDisplay"))
+                  "SmartFridge", "temperature"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.smartkitchen.fridge.TemperatureRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.smartkitchen.fridge.TemperatureResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmartFridgeMethodDescriptorSupplier("temperatureDisplay"))
+                  .setSchemaDescriptor(new SmartFridgeMethodDescriptorSupplier("temperature"))
                   .build();
           }
         }
      }
-     return getTemperatureDisplayMethod;
+     return getTemperatureMethod;
   }
 
   /**
@@ -88,20 +88,20 @@ public final class SmartFridgeGrpc {
 
     /**
      */
-    public void temperatureDisplay(io.grpc.smartkitchen.fridge.TemperatureRequest request,
+    public void temperature(io.grpc.smartkitchen.fridge.TemperatureRequest request,
         io.grpc.stub.StreamObserver<io.grpc.smartkitchen.fridge.TemperatureResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getTemperatureDisplayMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getTemperatureMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getTemperatureDisplayMethod(),
+            getTemperatureMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.grpc.smartkitchen.fridge.TemperatureRequest,
                 io.grpc.smartkitchen.fridge.TemperatureResponse>(
-                  this, METHODID_TEMPERATURE_DISPLAY)))
+                  this, METHODID_TEMPERATURE)))
           .build();
     }
   }
@@ -126,10 +126,10 @@ public final class SmartFridgeGrpc {
 
     /**
      */
-    public void temperatureDisplay(io.grpc.smartkitchen.fridge.TemperatureRequest request,
+    public void temperature(io.grpc.smartkitchen.fridge.TemperatureRequest request,
         io.grpc.stub.StreamObserver<io.grpc.smartkitchen.fridge.TemperatureResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getTemperatureDisplayMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getTemperatureMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -153,9 +153,9 @@ public final class SmartFridgeGrpc {
 
     /**
      */
-    public io.grpc.smartkitchen.fridge.TemperatureResponse temperatureDisplay(io.grpc.smartkitchen.fridge.TemperatureRequest request) {
+    public io.grpc.smartkitchen.fridge.TemperatureResponse temperature(io.grpc.smartkitchen.fridge.TemperatureRequest request) {
       return blockingUnaryCall(
-          getChannel(), getTemperatureDisplayMethod(), getCallOptions(), request);
+          getChannel(), getTemperatureMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,14 +179,14 @@ public final class SmartFridgeGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<io.grpc.smartkitchen.fridge.TemperatureResponse> temperatureDisplay(
+    public com.google.common.util.concurrent.ListenableFuture<io.grpc.smartkitchen.fridge.TemperatureResponse> temperature(
         io.grpc.smartkitchen.fridge.TemperatureRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getTemperatureDisplayMethod(), getCallOptions()), request);
+          getChannel().newCall(getTemperatureMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_TEMPERATURE_DISPLAY = 0;
+  private static final int METHODID_TEMPERATURE = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -205,8 +205,8 @@ public final class SmartFridgeGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_TEMPERATURE_DISPLAY:
-          serviceImpl.temperatureDisplay((io.grpc.smartkitchen.fridge.TemperatureRequest) request,
+        case METHODID_TEMPERATURE:
+          serviceImpl.temperature((io.grpc.smartkitchen.fridge.TemperatureRequest) request,
               (io.grpc.stub.StreamObserver<io.grpc.smartkitchen.fridge.TemperatureResponse>) responseObserver);
           break;
         default:
@@ -270,7 +270,7 @@ public final class SmartFridgeGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SmartFridgeFileDescriptorSupplier())
-              .addMethod(getTemperatureDisplayMethod())
+              .addMethod(getTemperatureMethod())
               .build();
         }
       }

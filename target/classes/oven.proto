@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.smartkitchen.oven";
+
+service SmartOven{
+	rpc preheat (stream PreheatRequest) returns (stream PreheatResponse);
+	
+	rpc turnOff (stream TurnOffRequest) returns (TurnOffResponse);
+	
+	
+}
+
+message PreheatRequest{
+	string setting = 1; //setting number of responses we want returned from client
+	
+	int32 heat = 2;
+}
+
+message PreheatResponse{
+	string ovenSettingSelected = 1;
+	
+	string heatSelected = 2;
+}
+
+message TurnOffRequest{
+	string turnOffHeat = 1;
+	
+	string turnOffOven = 2;
+}
+
+message TurnOffResponse{
+	string message = 1;
+}

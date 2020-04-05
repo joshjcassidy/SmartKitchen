@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.smartkitchen.lights";
+
+service SmartLights{
+	rpc lightsOn (LightsOnRequest) returns (LightsOn);
+	
+	rpc lightsOff (LightsOffRequest) returns (LightsOff);
+	
+	
+}
+
+message LightsOnRequest{
+	string message = 1; //setting number of responses we want returned from client
+}
+
+message LightsOnResponse{
+	string message = 1;
+}
+
+message LightsOffRequest{
+	string message = 1; //setting number of responses we want returned from client
+}
+
+message LightsOffResponse{
+	string message = 1;
+}
